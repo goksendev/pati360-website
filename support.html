@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pati360 — Destek / Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0D0D12;
+            --surface: #16161F;
+            --border: rgba(255,255,255,0.06);
+            --accent: #FF8A71;
+            --mint: #2DE1C2;
+            --lavender: #B19CD9;
+            --text: #E8E8ED;
+            --text-secondary: #9898A6;
+            --radius: 16px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent), #FF6B8A);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .lang-switch {
+            display: flex; gap: 8px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 540px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+        .card-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            text-align: center;
+        }
+        .contact-card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+        .email-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent), #FF6B8A);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 28px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .email-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255,138,113,0.3);
+            text-decoration: none;
+        }
+        .faq { margin-top: 40px; }
+        .faq h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--mint);
+        }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-q {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--accent);
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-q::after {
+            transform: rotate(45deg);
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-a-inner {
+            padding: 0 24px 18px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-a {
+            max-height: 300px;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-align: center;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">🐾</div>
+            <div class="logo-text">Pati360</div>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr">
+            <h1>Destek Merkezi</h1>
+            <p class="subtitle">Size nasıl yardımcı olabiliriz?</p>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(255,138,113,0.15);">🏥</div>
+                    <h3>Akıllı Veteriner</h3>
+                    <p>Dijital veteriner sohbeti, sağlık kaydı oluşturma ve huzur raporu hakkında yardım.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(45,225,194,0.15);">📷</div>
+                    <h3>Akıllı Lens & Kuaför</h3>
+                    <p>Tür tanıma, stil üretimi ve kolaj kaydetme ile ilgili sorular.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(177,156,217,0.15);">🔐</div>
+                    <h3>Hesap & Güvenlik</h3>
+                    <p>Giriş sorunları, hesap silme, veri yedekleme ve gizlilik.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(255,215,0,0.15);">⭐</div>
+                    <h3>Başarımlar & Özellikler</h3>
+                    <p>Ödül sistemi, hatırlatıcılar, galeri ve genel uygulama kullanımı.</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>Bize Ulaşın</h2>
+                <p>Sorularınız, önerileriniz veya bildirmek istediğiniz hatalar için bize yazın. 24 saat içinde yanıt vermeye çalışıyoruz.</p>
+                <a href="mailto:hello@pati360.app?subject=Pati360%20Destek" class="email-btn">hello@pati360.app</a>
+            </div>
+
+            <div class="faq">
+                <h2>Sık Sorulan Sorular</h2>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Verilerim güvende mi?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Evet. Tüm verileriniz Firebase altyapısı üzerinde şifrelenerek saklanır. Her kullanıcı yalnızca kendi verilerine erişebilir. Akıllı Lens tamamen cihazınızda çalışır, hiçbir görüntü veri sunucuya gönderilmez.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Hesabımı nasıl silebilirim?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Ayarlar ekranının en altındaki "Basılı Tut → Tüm Verileri Sil" butonunu 3 saniye basılı tutarak tüm verilerinizi kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Cihaz değiştirdim, verilerim aktarılır mı?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Evet. Aynı hesapla giriş yaptığınızda tüm evcil hayvan verileri, sağlık kayıtları ve medya dosyaları otomatik olarak yeni cihazınıza senkronize edilir.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Akıllı Veteriner gerçek veteriner tavsiyesi mi?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Akıllı Veteriner yapay zekâ destekli bir asistan olup genel bilgi ve rehberlik sağlar. Profesyonel veteriner muayenesi ve tedavinin yerini almaz. Acil durumlarda mutlaka bir veteriner hekime başvurun.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Uygulama ücretsiz mi?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Pati360'ın temel özellikleri ücretsiz olarak sunulmaktadır. Gelişmiş özellikler için abonelik seçenekleri mevcuttur.</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en" class="hidden">
+            <h1>Support Center</h1>
+            <p class="subtitle">How can we help you?</p>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(255,138,113,0.15);">🏥</div>
+                    <h3>Smart Veterinarian</h3>
+                    <p>Help with digital vet chat, health records, and wellness reports.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(45,225,194,0.15);">📷</div>
+                    <h3>Smart Lens & Groomer</h3>
+                    <p>Questions about species recognition, style generation, and collage saving.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(177,156,217,0.15);">🔐</div>
+                    <h3>Account & Security</h3>
+                    <p>Login issues, account deletion, data backup, and privacy.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(255,215,0,0.15);">⭐</div>
+                    <h3>Achievements & Features</h3>
+                    <p>Achievement system, reminders, gallery, and general app usage.</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>Contact Us</h2>
+                <p>Write to us with your questions, suggestions, or bugs to report. We aim to respond within 24 hours.</p>
+                <a href="mailto:hello@pati360.app?subject=Pati360%20Support" class="email-btn">hello@pati360.app</a>
+            </div>
+
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Is my data safe?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Yes. All your data is encrypted and stored on Firebase infrastructure. Each user can only access their own data. Smart Lens runs entirely on your device — no image data is sent to any server.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How can I delete my account?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Hold the "Hold → Delete All Data" button at the bottom of the Settings screen for 3 seconds to permanently delete all your data. This action cannot be undone.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">I switched devices. Will my data transfer?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Yes. When you sign in with the same account, all pet data, health records, and media files are automatically synced to your new device.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Is the Smart Vet real veterinary advice?</div>
+                    <div class="faq-a"><div class="faq-a-inner">The Smart Veterinarian is an AI-powered assistant that provides general information and guidance. It does not replace professional veterinary examination and treatment. In emergencies, always consult a veterinarian.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Is the app free?</div>
+                    <div class="faq-a"><div class="faq-a-inner">Core features of Pati360 are available for free. Subscription options are available for advanced features.</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="/privacy">Gizlilik Politikası / Privacy Policy</a>
+            <br><br>
+            &copy; 2026 Pati360 — 360 Studio. Tüm hakları saklıdır / All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr').classList.toggle('hidden', lang !== 'tr');
+            document.getElementById('en').classList.toggle('hidden', lang !== 'en');
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+        function toggleFaq(el) {
+            el.parentElement.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pati360 — Gizlilik Politikası / Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0D0D12;
+            --surface: #16161F;
+            --border: rgba(255,255,255,0.06);
+            --accent: #FF8A71;
+            --mint: #2DE1C2;
+            --text: #E8E8ED;
+            --text-secondary: #9898A6;
+            --radius: 16px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent), #FF6B8A);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .lang-switch {
+            display: flex; gap: 8px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--mint);
+            margin: 36px 0 12px;
+        }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 14px; color: var(--text-secondary); font-size: 15px; }
+        ul {
+            margin: 8px 0 14px 20px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        li { margin-bottom: 6px; }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-top: 24px;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-align: center;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">🐾</div>
+            <div class="logo-text">Pati360</div>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr">
+            <h1>Gizlilik Politikası</h1>
+            <p class="subtitle">Son güncelleme: 24 Mart 2026</p>
+
+            <div class="card">
+                <h2>1. Toplanan Veriler</h2>
+                <p>Pati360 uygulaması aşağıdaki verileri toplar ve işler:</p>
+                <ul>
+                    <li><strong>Hesap Bilgileri:</strong> Ad, e-posta adresi, telefon numarası (kayıt sırasında sağladığınız bilgiler).</li>
+                    <li><strong>Evcil Hayvan Verileri:</strong> İsim, tür, ırk, cinsiyet, doğum tarihi, kilo, sağlık kayıtları, aşı bilgileri, hatırlatıcılar.</li>
+                    <li><strong>Medya:</strong> Fotoğraflar (galeri, kuaför kolajları, dijital ikiz görselleri). Bu medya dosyaları yalnızca sizin hesabınıza bağlı bulut depolama alanında saklanır.</li>
+                    <li><strong>Sohbet Verileri:</strong> Akıllı Veteriner ile yapılan sohbet geçmişi (cihazınızda yerel olarak saklanır).</li>
+                    <li><strong>Cihaz Bilgileri:</strong> Kamera (Akıllı Lens, OCR tarama), fotoğraf galerisi, konum (acil durum klinik arama — yalnızca izninizle).</li>
+                </ul>
+
+                <h2>2. Verilerin Kullanımı</h2>
+                <p>Topladığımız verileri aşağıdaki amaçlarla kullanırız:</p>
+                <ul>
+                    <li>Hesap oluşturma ve kimlik doğrulama</li>
+                    <li>Evcil hayvan profil yönetimi ve sağlık takibi</li>
+                    <li>Akıllı Veteriner sohbet hizmeti sunma</li>
+                    <li>Hatırlatıcı bildirimleri gönderme</li>
+                    <li>Bulut senkronizasyonu ile cihazlar arası veri aktarımı</li>
+                    <li>Uygulama performansını iyileştirme</li>
+                </ul>
+
+                <h2>3. Veri Paylaşımı</h2>
+                <p>Kişisel verilerinizi üçüncü taraflarla satmıyoruz. Verileriniz yalnızca aşağıdaki hizmet sağlayıcılarla teknik olarak paylaşılır:</p>
+                <ul>
+                    <li><strong>Firebase (Google):</strong> Kimlik doğrulama, veritabanı ve bulut depolama altyapısı.</li>
+                    <li><strong>Google Gemini API:</strong> Akıllı Veteriner sohbet ve Pet Kuaför stil üretimi (gönderilen fotoğraflar geçici olarak işlenir, kalıcı olarak saklanmaz).</li>
+                    <li><strong>Apple Vision Framework:</strong> Akıllı Lens hayvan tanıma — tamamen cihaz üzerinde çalışır, hiçbir veri dışarı gönderilmez.</li>
+                </ul>
+
+                <h2>4. Cihaz Üzeri İşleme</h2>
+                <p>Akıllı Lens özelliği Apple Vision Framework kullanarak tamamen cihazınızda çalışır. Hayvan tanıma ve sınıflandırma verileri hiçbir sunucuya gönderilmez. Bu, gizliliğinizin en üst düzeyde korunmasını sağlar.</p>
+
+                <h2>5. Veri Güvenliği</h2>
+                <p>Verileriniz Firebase altyapısı üzerinde endüstri standardı güvenlik protokolleriyle korunur. Kullanıcı bazlı veri izolasyonu uygulanır; her kullanıcı yalnızca kendi verilerine erişebilir. API anahtarları şifrelenmiş yapılandırma dosyalarında saklanır.</p>
+
+                <h2>6. Veri Saklama ve Silme</h2>
+                <p>Hesabınızı sildiğinizde tüm kişisel verileriniz, evcil hayvan kayıtlarınız ve medya dosyalarınız kalıcı olarak silinir. Bu işlem geri alınamaz. Cihazınızdaki yerel veriler uygulama kaldırıldığında otomatik olarak silinir.</p>
+
+                <h2>7. Çocukların Gizliliği</h2>
+                <p>Pati360, 13 yaşın altındaki çocuklara yönelik değildir. Bilinçli olarak 13 yaşın altındaki kişilerden veri toplamıyoruz.</p>
+
+                <h2>8. Değişiklikler</h2>
+                <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içinden bildirilecektir.</p>
+
+                <h2>9. İletişim</h2>
+                <p>Gizliliğinizle ilgili sorularınız için bize ulaşın:<br>
+                <a href="mailto:hello@pati360.app">hello@pati360.app</a></p>
+            </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en" class="hidden">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Last updated: March 24, 2026</p>
+
+            <div class="card">
+                <h2>1. Data We Collect</h2>
+                <p>The Pati360 application collects and processes the following data:</p>
+                <ul>
+                    <li><strong>Account Information:</strong> Name, email address, phone number (provided during registration).</li>
+                    <li><strong>Pet Data:</strong> Name, species, breed, gender, date of birth, weight, health records, vaccination information, reminders.</li>
+                    <li><strong>Media:</strong> Photos (gallery, groomer collages, digital twin images). These media files are stored only in cloud storage linked to your account.</li>
+                    <li><strong>Chat Data:</strong> Conversation history with the Smart Veterinarian (stored locally on your device).</li>
+                    <li><strong>Device Access:</strong> Camera (Smart Lens, OCR scanning), photo library, location (emergency clinic search — only with your permission).</li>
+                </ul>
+
+                <h2>2. How We Use Your Data</h2>
+                <p>We use the data we collect for the following purposes:</p>
+                <ul>
+                    <li>Account creation and authentication</li>
+                    <li>Pet profile management and health tracking</li>
+                    <li>Providing Smart Veterinarian chat services</li>
+                    <li>Sending reminder notifications</li>
+                    <li>Cloud synchronization for cross-device data transfer</li>
+                    <li>Improving application performance</li>
+                </ul>
+
+                <h2>3. Data Sharing</h2>
+                <p>We do not sell your personal data to third parties. Your data is shared only technically with the following service providers:</p>
+                <ul>
+                    <li><strong>Firebase (Google):</strong> Authentication, database, and cloud storage infrastructure.</li>
+                    <li><strong>Google Gemini API:</strong> Smart Veterinarian chat and Pet Groomer style generation (submitted photos are temporarily processed, not permanently stored).</li>
+                    <li><strong>Apple Vision Framework:</strong> Smart Lens animal recognition — runs entirely on-device, no data is sent externally.</li>
+                </ul>
+
+                <h2>4. On-Device Processing</h2>
+                <p>The Smart Lens feature runs entirely on your device using Apple Vision Framework. Animal recognition and classification data is never sent to any server, ensuring the highest level of privacy protection.</p>
+
+                <h2>5. Data Security</h2>
+                <p>Your data is protected with industry-standard security protocols on Firebase infrastructure. User-based data isolation is enforced; each user can only access their own data. API keys are stored in encrypted configuration files.</p>
+
+                <h2>6. Data Retention and Deletion</h2>
+                <p>When you delete your account, all your personal data, pet records, and media files are permanently deleted. This action cannot be undone. Local data on your device is automatically deleted when the app is removed.</p>
+
+                <h2>7. Children's Privacy</h2>
+                <p>Pati360 is not intended for children under 13. We do not knowingly collect data from individuals under 13 years of age.</p>
+
+                <h2>8. Changes</h2>
+                <p>We may update this privacy policy from time to time. Significant changes will be communicated through the application.</p>
+
+                <h2>9. Contact</h2>
+                <p>For questions about your privacy, contact us at:<br>
+                <a href="mailto:hello@pati360.app">hello@pati360.app</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Pati360 — 360 Studio. Tüm hakları saklıdır / All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr').classList.toggle('hidden', lang !== 'tr');
+            document.getElementById('en').classList.toggle('hidden', lang !== 'en');
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pati360 — Kullanım Koşulları / Terms of Use</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0D0D12;
+            --surface: #16161F;
+            --border: rgba(255,255,255,0.06);
+            --accent: #FF8A71;
+            --mint: #2DE1C2;
+            --text: #E8E8ED;
+            --text-secondary: #9898A6;
+            --radius: 16px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent), #FF6B8A);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .logo-text { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+        .lang-switch { display: flex; gap: 8px; margin-bottom: 40px; }
+        .lang-btn {
+            padding: 8px 18px; border-radius: 20px; border: 1px solid var(--border);
+            background: transparent; color: var(--text-secondary); font-size: 14px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+        h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 40px; }
+        h2 { font-size: 18px; font-weight: 600; color: var(--mint); margin: 36px 0 12px; }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 14px; color: var(--text-secondary); font-size: 15px; }
+        ul { margin: 8px 0 14px 20px; color: var(--text-secondary); font-size: 15px; }
+        li { margin-bottom: 6px; }
+        .card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 32px; margin-top: 24px;
+        }
+        .footer {
+            margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+            color: var(--text-secondary); font-size: 13px; text-align: center;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">🐾</div>
+            <div class="logo-text">Pati360</div>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr">
+            <h1>Kullanım Koşulları</h1>
+            <p class="subtitle">Son güncelleme: 24 Mart 2026</p>
+
+            <div class="card">
+                <h2>1. Kabul</h2>
+                <p>Pati360 uygulamasını indirerek ve kullanarak bu kullanım koşullarını kabul etmiş olursunuz. Koşulları kabul etmiyorsanız uygulamayı kullanmayınız.</p>
+
+                <h2>2. Hizmet Tanımı</h2>
+                <p>Pati360, evcil hayvan yönetimi, sağlık takibi ve yapay zekâ destekli araçlar sunan bir mobil uygulamadır. Uygulama profesyonel veteriner hizmeti sunmamaktadır.</p>
+
+                <h2>3. Kullanıcı Sorumlulukları</h2>
+                <ul>
+                    <li>Hesap bilgilerinizin güvenliğinden siz sorumlusunuz.</li>
+                    <li>Uygulamayı yasa dışı amaçlarla kullanamazsınız.</li>
+                    <li>Girdiğiniz verilerin doğruluğundan siz sorumlusunuz.</li>
+                    <li>Diğer kullanıcıların deneyimini olumsuz etkileyecek davranışlardan kaçınmalısınız.</li>
+                </ul>
+
+                <h2>4. Akıllı Veteriner Uyarısı</h2>
+                <p>Akıllı Veteriner özelliği yapay zekâ tabanlı genel bilgi ve rehberlik sağlar. Bu hizmet profesyonel veteriner muayenesi, teşhis veya tedavinin yerini almaz. Evcil hayvanınızın sağlığıyla ilgili kararlarınızda mutlaka lisanslı bir veteriner hekime danışın. Acil durumlarda derhal bir veteriner kliniğine başvurun.</p>
+
+                <h2>5. Fikri Mülkiyet</h2>
+                <p>Pati360 uygulaması, tasarımı, logosu ve içerikleri 360 Studio'nun fikri mülkiyetidir. Yazılı izin olmadan kopyalanamaz, dağıtılamaz veya değiştirilemez.</p>
+
+                <h2>6. Hizmet Değişiklikleri</h2>
+                <p>Pati360 özelliklerini, fiyatlandırmasını veya hizmet kapsamını önceden bildirmeksizin değiştirme hakkını saklı tutar.</p>
+
+                <h2>7. Sorumluluk Sınırı</h2>
+                <p>Pati360, uygulamanın kullanımından doğabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz. Uygulama "olduğu gibi" sunulmaktadır.</p>
+
+                <h2>8. Hesap Feshi</h2>
+                <p>Kullanım koşullarını ihlal eden hesaplar önceden bildirim yapılmaksızın askıya alınabilir veya kapatılabilir.</p>
+
+                <h2>9. İletişim</h2>
+                <p>Bu koşullarla ilgili sorularınız için: <a href="mailto:hello@pati360.app">hello@pati360.app</a></p>
+            </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en" class="hidden">
+            <h1>Terms of Use</h1>
+            <p class="subtitle">Last updated: March 24, 2026</p>
+
+            <div class="card">
+                <h2>1. Acceptance</h2>
+                <p>By downloading and using the Pati360 application, you agree to these terms of use. If you do not accept these terms, please do not use the application.</p>
+
+                <h2>2. Service Description</h2>
+                <p>Pati360 is a mobile application that provides pet management, health tracking, and AI-powered tools. The application does not provide professional veterinary services.</p>
+
+                <h2>3. User Responsibilities</h2>
+                <ul>
+                    <li>You are responsible for the security of your account information.</li>
+                    <li>You may not use the application for illegal purposes.</li>
+                    <li>You are responsible for the accuracy of the data you enter.</li>
+                    <li>You must avoid behavior that negatively affects other users' experience.</li>
+                </ul>
+
+                <h2>4. Smart Veterinarian Disclaimer</h2>
+                <p>The Smart Veterinarian feature provides AI-based general information and guidance. This service does not replace professional veterinary examination, diagnosis, or treatment. Always consult a licensed veterinarian for decisions about your pet's health. In emergencies, contact a veterinary clinic immediately.</p>
+
+                <h2>5. Intellectual Property</h2>
+                <p>The Pati360 application, its design, logo, and content are the intellectual property of 360 Studio. They may not be copied, distributed, or modified without written permission.</p>
+
+                <h2>6. Service Changes</h2>
+                <p>Pati360 reserves the right to change features, pricing, or service scope without prior notice.</p>
+
+                <h2>7. Limitation of Liability</h2>
+                <p>Pati360 cannot be held responsible for direct or indirect damages arising from the use of the application. The application is provided "as is."</p>
+
+                <h2>8. Account Termination</h2>
+                <p>Accounts that violate the terms of use may be suspended or closed without prior notice.</p>
+
+                <h2>9. Contact</h2>
+                <p>For questions about these terms: <a href="mailto:hello@pati360.app">hello@pati360.app</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="/privacy">Gizlilik Politikası / Privacy Policy</a>
+            <br><br>
+            &copy; 2026 Pati360 — 360 Studio. Tüm hakları saklıdır / All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr').classList.toggle('hidden', lang !== 'tr');
+            document.getElementById('en').classList.toggle('hidden', lang !== 'en');
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+    </script>
+</body>
+</html>
